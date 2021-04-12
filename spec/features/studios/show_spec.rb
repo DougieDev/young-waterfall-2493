@@ -26,16 +26,16 @@ RSpec.describe 'studio show page', type: :feature do
     # And I see the titles of all of its movies
     visit '/studios'
     
-    # within("studio-#{@studio_1.id}") do
+    within("#studio-#{@studio_1.id}") do
       expect(page).to have_content(@studio_1.name)
       expect(page).to have_content(@studio_1.location)
-      # expect(page).to have_content(@actor_1.name)
-    # end
+    end
 
-    # within("studio-#{@studio_2.id}") do
+    within("#studio-#{@studio_2.id}") do
       expect(page).to have_content(@studio_2.name)
       expect(page).to have_content(@studio_2.location)
-      # expect(page).to have_content(@actor_2.name)
-    # end
+    end
   end
+
+  
 end
